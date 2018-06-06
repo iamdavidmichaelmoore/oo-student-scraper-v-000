@@ -9,7 +9,7 @@ class Scraper
       hash = {}
       hash[:location] = student.css("p.student-location").text
       hash[:name] = student.css("h4.student-name").text
-      hash[:profile_url] = doc.css("a")[a_tag_num+1]["href"]
+      hash[:profile_url] = index_page.css("a")[a_tag_num+1]["href"]
       student_ary << hash
     end
     student_ary
